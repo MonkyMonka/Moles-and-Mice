@@ -4,31 +4,31 @@
 
 	/// Define Sprites : sprite_add("path/to/sprite/starting/from/mod/location.png", frames, x-offset, y-offset) \\\
 	 // A-Skin:
-	global.spr_idle[0] = sprite_add("sprMutant1Idle.png",	4, 12, 12);
-	global.spr_walk[0] = sprite_add("sprMutant1Walk.png",	6, 12, 12);
-	global.spr_hurt[0] = sprite_add("sprMutant1Hurt.png",	3, 12, 12);
-	global.spr_dead[0] = sprite_add("sprMutant1Dead.png",	6, 12, 12);
-	global.spr_sit1[0] = sprite_add("sprMutant1GoSit.png",	3, 12, 12);
-	global.spr_sit2[0] = sprite_add("sprMutant1Sit.png",	1, 12, 12);
+	global.spr_idle[0] = sprite_add("../sprites/characters/sprMutant1Idle.png",	4, 12, 12);
+	global.spr_walk[0] = sprite_add("../sprites/characters/sprMutant1Walk.png",	6, 12, 12);
+	global.spr_hurt[0] = sprite_add("../sprites/characters/sprMutant1Hurt.png",	3, 12, 12);
+	global.spr_dead[0] = sprite_add("../sprites/characters/sprMutant1Dead.png",	6, 12, 12);
+	global.spr_sit1[0] = sprite_add("../sprites/characters/ssprMutant1GoSit.png",	3, 12, 12);
+	global.spr_sit2[0] = sprite_add("../sprites/characters/sprMutant1Sit.png",	1, 12, 12);
 
 	 // B-Skin:
-	global.spr_idle[1] = sprite_add("sprMutant1BIdle.png",	4, 12, 12);
-	global.spr_walk[1] = sprite_add("sprMutant1BWalk.png",	6, 12, 12);
-	global.spr_hurt[1] = sprite_add("sprMutant1BHurt.png",	3, 12, 12);
-	global.spr_dead[1] = sprite_add("sprMutant1BDead.png",	6, 12, 12);
-	global.spr_sit1[1] = sprite_add("sprMutant1BGoSit.png",	3, 12, 12);
-	global.spr_sit2[1] = sprite_add("sprMutant1BSit.png",	1, 12, 12);
+	global.spr_idle[1] = sprite_add("../sprites/characters/sprMutant1BIdle.png",	4, 12, 12);
+	global.spr_walk[1] = sprite_add("../sprites/characters/sprMutant1BWalk.png",	6, 12, 12);
+	global.spr_hurt[1] = sprite_add("../sprites/characters/sprMutant1BHurt.png",	3, 12, 12);
+	global.spr_dead[1] = sprite_add("../sprites/characters/sprMutant1BDead.png",	6, 12, 12);
+	global.spr_sit1[1] = sprite_add("../sprites/characters/sprMutant1BGoSit.png",	3, 12, 12);
+	global.spr_sit2[1] = sprite_add("../sprites/characters/sprMutant1BSit.png",	1, 12, 12);
 	
 	 // Character Selection / Loading Screen:
-	global.spr_slct = sprite_add("sprCharSelect.png",	1,				0,  0);
-	global.spr_port = sprite_add("sprBigPortrait.png",	race_skins(),	40, 243);
-	global.spr_skin = sprite_add("sprLoadoutSkin.png",	race_skins(),	16, 16);
-	global.spr_icon = sprite_add("sprMapIcon.png",		race_skins(),	10, 10);
+	global.spr_slct = sprite_add("../sprites/characters/sprCharSelect.png",	1,				0,  0);
+	global.spr_port = sprite_add("../sprites/characters/sprBigPortrait.png",	race_skins(),	40, 243);
+	global.spr_skin = sprite_add("../sprites/characters/sprLoadoutSkin.png",	race_skins(),	16, 16);
+	global.spr_icon = sprite_add("../sprites/characters/sprMapIcon.png",		race_skins(),	10, 10);
 
 	 // Ultras:
-	global.spr_ult_slct = sprite_add("sprEGSkillIcon.png",	ultra_count("fishexample"), 12, 16);
-	global.spr_ult_icon[1] = sprite_add("sprEGIconHUDA.png", 1, 8, 9);
-	global.spr_ult_icon[2] = sprite_add("sprEGIconHUDB.png", 1, 8, 9);
+	global.spr_ult_slct = sprite_add("../sprites/characters/sprEGSkillIcon.png",	ultra_count("fishexample"), 12, 16);
+	global.spr_ult_icon[1] = sprite_add("../sprites/characters/sprEGIconHUDA.png", 1, 8, 9);
+	global.spr_ult_icon[2] = sprite_add("../sprites/characters/sprEGIconHUDB.png", 1, 8, 9);
 
 
 	var _race = [];

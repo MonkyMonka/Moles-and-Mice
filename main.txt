@@ -1,1 +1,2 @@
 /loadmod characters/mouse.race.gml
+/loadmod areas/burrows.area.gml
