@@ -1,10 +1,10 @@
 #define init
     global.spr = {
-        WeaponSprite: sprite_add_weapon("../sprites/weapons/CarrionSprites/CarrionHand.png", 0, 2),
+        WeaponSprite: sprite_add_weapon("../sprites/weapons/CarrionSprites/CarrionHand.png", 0, 4),
         Maggotball: sprite_add("../sprites/weapons/CarrionSprites/Maggotball.png", 1, 0, 0),
-        NestMaggotIdle:sprite_add("../sprites/weapons/CarrionSprites/sprNestMaggotIdle.png", 4, 0, 0),
-        NestMaggotHurt:sprite_add("../sprites/weapons/CarrionSprites/sprNestMaggotHurt.png", 3, 0, 0),
-        NestMaggotDeath:sprite_add("../sprites/weapons/CarrionSprites/sprNestMaggotDeath.png", 6, 0, 0), }
+        NestMaggotIdle:sprite_add("../sprites/weapons/CarrionSprites/sprNestMaggotIdle.png", 4, 8, 8),
+        NestMaggotHurt:sprite_add("../sprites/weapons/CarrionSprites/sprNestMaggotHurt.png", 3, 8, 8),
+        NestMaggotDeath:sprite_add("../sprites/weapons/CarrionSprites/sprNestMaggotDeath.png", 6, 8, 8), }
     global.msk = {
     	Maggotball:	sprite_add("../sprites/weapons/CarrionSprites/mskMaggotball.png", 1, 1, 1),
     	NestMaggot: sprite_add("../sprites/weapons/CarrionSprites/mskNestMaggot.png", 1, 0, 0),
@@ -37,21 +37,21 @@
 	var _gunangle = "gunangle" in self ? gunangle : direction;
     var _accuracy = "accuracy" in self ? accuracy : 1;
 	with(instance_create(x,y,CustomProjectile)) {
-    	creator = c
-    	team = other.team
+    	creator = c;
+    	team = other.team;
     	speed = random_range(8,10); 
     	friction = 0;
 		direction = creator.gunangle + random_range(-5,5);
 		image_angle = direction;
-		sprite_index = global.spr.Maggotball 
-		mask_index = global.msk.Maggotball
-		damage = 3
-		force = 3
-		image_xscale = 1
-		image_yscale = 1
+		sprite_index = global.spr.Maggotball ;
+		mask_index = global.msk.Maggotball;
+		damage = 3;
+		force = 3;
+		image_xscale = 1;
+		image_yscale = 1;
 		alrm0 = 10;
 		alrm0_max = 30;
-		ammo = 10
+		ammo = 5
 		on_destroy = generic_destroy;
 		on_step = generic_step
 	 }
@@ -61,7 +61,7 @@
         if alrm0 <= 0{
             with(CustomMaggot_Create(x, y)){
                 direction = random(360);
-                speed = 14;
+                speed = 100;
                 team = other.team;
             }
             ammo --;
@@ -111,6 +111,7 @@
 		maxhealth = 4;
 		image_speed = 0.4;
 		
+	
 		alrm0 = 10;
 		alrm0_max = 30;
 		meleedamage = 1;
@@ -157,7 +158,7 @@
 				my_health = 0;
 				exit;
 			}
-			
+			image_xscale = (direction + 270) % 360 > 180 ? -1 : 1;
 			// Attack the nearest enemy, or randomly bumble about if none are found
 			var _n = instance_nearest(x,y,enemy);
 			if instance_exists(_n) && !collision_line(_n.x,_n.y,x,y, Wall, 0, 1){
