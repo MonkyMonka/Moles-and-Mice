@@ -4,12 +4,12 @@
 
 	/// Define Sprites : sprite_add("path/to/sprite/starting/from/mod/location.png", frames, x-offset, y-offset) \\\
 	 // A-Skin:
-	global.spr_idle[0] = sprite_add("../sprites/characters/sprMutant1Idle.png",	4, 12, 12);
-	global.spr_walk[0] = sprite_add("../sprites/characters/sprMutant1Walk.png",	6, 12, 12);
-	global.spr_hurt[0] = sprite_add("../sprites/characters/sprMutant1Hurt.png",	3, 12, 12);
-	global.spr_dead[0] = sprite_add("../sprites/characters/sprMutant1Dead.png",	6, 12, 12);
-	global.spr_sit1[0] = sprite_add("../sprites/characters/ssprMutant1GoSit.png",	3, 12, 12);
-	global.spr_sit2[0] = sprite_add("../sprites/characters/sprMutant1Sit.png",	1, 12, 12);
+	global.spr_idle[0] = sprite_add("../sprites/characters/mole/sprMoleIdle.png",	4, 12, 12);
+	global.spr_walk[0] = sprite_add("../sprites/characters/mole/sprMoleWalk.png",	6, 12, 12);
+	global.spr_hurt[0] = sprite_add("../sprites/characters/mole/sprMoleHurt.png",	3, 12, 12);
+	global.spr_dead[0] = sprite_add("../sprites/characters/mole/sprMoleDead.png",	6, 12, 12);
+	global.spr_sit1[0] = sprite_add("../sprites/characters/mole/ssprMoleGoSit.png",	3, 12, 12);
+	global.spr_sit2[0] = sprite_add("../sprites/characters/mole/sprMoleSit.png",	1, 12, 12);
 
 	 // B-Skin:
 	global.spr_idle[1] = sprite_add("../sprites/characters/sprMutant1BIdle.png",	4, 12, 12);
@@ -20,10 +20,10 @@
 	global.spr_sit2[1] = sprite_add("../sprites/characters/sprMutant1BSit.png",	1, 12, 12);
 	
 	 // Character Selection / Loading Screen:
-	global.spr_slct = sprite_add("../sprites/characters/sprCharSelect.png",	1,				0,  0);
-	global.spr_port = sprite_add("../sprites/characters/sprBigPortrait.png",	race_skins(),	40, 243);
-	global.spr_skin = sprite_add("../sprites/characters/sprLoadoutSkin.png",	race_skins(),	16, 16);
-	global.spr_icon = sprite_add("../sprites/characters/sprMapIcon.png",		race_skins(),	10, 10);
+	global.spr_slct = sprite_add("../sprites/characters/mole/sprMoleSelect.png",	1,				0,  0);
+	global.spr_port = sprite_add("../sprites/characters/mole/sprMolePortrait.png",	race_skins(),	40, 243);
+	global.spr_skin = sprite_add("../sprites/characters/mole/sprMoleLoadoutSkin.png",	race_skins(),	16, 16);
+	global.spr_icon = sprite_add("../sprites/characters/mole/sprMoleMapIcon.png",		race_skins(),	10, 10);
 
 	 // Ultras:
 	global.spr_ult_slct = sprite_add("../sprites/characters/sprEGSkillIcon.png",	ultra_count("fishexample"), 12, 16);
@@ -107,7 +107,7 @@
 		if(button_pressed(index, "spec") && speed <= 0) direction = gunangle;
 
 		 // Start Water Boost:
-		if(skill_get(5)){
+		/*if(skill_get(5)){*/
 			 // Sound:
 			if(button_pressed(index, "spec")){
 				sound_play(sndFishRollUpg);
@@ -119,12 +119,12 @@
 		}
 
 		 // Start Roll:
-		else if(button_pressed(index, "spec") && !rollTime){
+		/*else if(button_pressed(index, "spec") && !rollTime){
 			rollTime = 10;		 // 10 Frame Roll
-			sound_play(sndRoll); // Sound
+			sound_play(sndRoll); */ // Sound
 			
-		}
-	}
+		
+
 	if(rollTime > 0){
 		rollTime--;
 
